@@ -1,0 +1,47 @@
+trigger:
+  branches:
+    include:
+      - main
+  paths:
+    exclude:
+      - .gitignore
+      - CHANGELOG.md
+      - CODE_OF_CONDUCT.md
+      - LICENSE.md
+      - README.md
+      - NuGet.Config
+      - ./*.yml
+
+pool:
+  vmImage: 'windows-2022'
+
+variables:
+- group: mako-iot-github
+- name: runSettingsFile
+  value: 'Tests\SoftwareTests\MakoIoT.Device.Services.Logging.Sinks.Elasticsearch.Test\nano.runsettings'
+- name: packageName
+  value: 'MakoIoT.Device.Services.Logging.Sinks.Elasticsearch'
+
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: CShark-Hub/Mako-IoT.Tools
+      endpoint: CShark-Hub
+
+stages:
+- stage: BuildAndTest
+  displayName: "Build & Test"
+  jobs:
+  - job:
+    steps:
+    - template: azure-pipelines-templates/azure-pipelines-ci-template.yml@templates
+
+- stage: PublishNuGet
+  displayName: "Publish NuGet"
+  dependsOn: BuildAndTest
+  condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+  jobs:
+  - job:
+    steps:
+    - template: azure-pipelines-templates/azure-pipelines-publish-template.yml@templates
