@@ -12,8 +12,8 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <FileAlignment>512</FileAlignment>
-    <RootNamespace>MakoIoT.Device.Services.Logging.Sinks.SdCard</RootNamespace>
-    <AssemblyName>MakoIoT.Device.Services.Logging.Sinks.SdCard</AssemblyName>
+    <RootNamespace>MakoIoT.Device.Services.Logging.Sinks.Elasticsearch</RootNamespace>
+    <AssemblyName>MakoIoT.Device.Services.Logging.Sinks.Elasticsearch</AssemblyName>
     <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
   </PropertyGroup>
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
