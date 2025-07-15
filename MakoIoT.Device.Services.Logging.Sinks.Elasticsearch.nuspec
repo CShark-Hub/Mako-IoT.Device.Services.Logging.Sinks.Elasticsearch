@@ -17,15 +17,17 @@
     <description>MAKO-IoT Platform local configuration library. On-device web server, WiFi AP</description>
     <tags>nanoFramework C# csharp netmf netnf mako-iot platform device configuration ap webserver</tags>
     <dependencies>
-      <dependency id="MakoIoT.Device.Services.Interface" version="1.0.43.29288" />
-	  <dependency id="MakoIoT.Device.Utilities.Invoker" version="1.0.27.50780" />
-      <dependency id="nanoFramework.CoreLibrary" version="1.15.5" />
-      <dependency id="nanoFramework.DependencyInjection" version="1.1.3" />
-	  <dependency id="nanoFramework.System.Collections" version="1.5.31" />
-	  <dependency id="nanoFramework.System.Net" version="1.10.64" />
-	  <dependency id="nanoFramework.System.Net.Http" version="1.5.113" />
-	  <dependency id="nanoFramework.System.Text" version="1.2.54" />
-	  <dependency id="nanoFramework.System.Threading" version="1.1.32" />
+		<dependency id="MakoIoT.Device.Services.Interface" version="1.0.56.42770" />
+		<dependency id="MakoIoT.Device.Utilities.Invoker" version="1.0.48.26874" />
+		<dependency id="nanoFramework.CoreLibrary" version="1.17.11" />
+		<dependency id="nanoFramework.DependencyInjection" version="1.1.32" />
+		<dependency id="nanoFramework.Runtime.Events" version="1.11.32" />
+		<dependency id="nanoFramework.System.Collections" version="1.5.67" />
+		<dependency id="nanoFramework.System.IO.Streams" version="1.1.96" />
+		<dependency id="nanoFramework.System.Net" version="1.11.43" />
+		<dependency id="nanoFramework.System.Net.Http" version="1.5.196" />
+		<dependency id="nanoFramework.System.Text" version="1.3.42" />
+		<dependency id="nanoFramework.System.Threading" version="1.1.52" />
     </dependencies>
   </metadata>
   <files>
